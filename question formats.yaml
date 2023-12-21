@@ -1,0 +1,20 @@
+questions:
+  - type: yes_no
+    question: "Is your project actively maintained? (y/n)"
+  - type: single_choice
+    question: "What is the purpose of your project?"
+    options:
+      - choice: "Option 1"
+      - choice: "Option 2"
+      - choice: "Option 3"
+  - type: multiple_choice
+    question: "Which of the following best describe your project?"
+    options:
+      - choice: "Option A"
+      - choice: "Option B"
+      - choice: "Option C"
+      - choice: "Option D"
+  - type: open_input
+    question: "Please provide additional comments or details about your project."
+
+

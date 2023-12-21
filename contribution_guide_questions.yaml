@@ -1,0 +1,234 @@
+desired_headings:
+  type: multiple_choice
+  question: "Select the headings you want in your contributing.md file (multiple choices allowed). You can navigate the options and press space to select [x]."
+  options:
+    - choice: "[  ] Introduction"
+    - choice: "[  ] Project Overview"
+    - choice: "[  ] Contribution Process"
+    - choice: "[  ] Pull Request Guidelines"
+    - choice: "[  ] Coding Conventions"
+    - choice: "[  ] Documentation"
+    - choice: "[  ] Issue Tracking"
+    - choice: "[  ] Community Guidelines"
+    - choice: "[  ] Testing"
+    - choice: "[  ] License"
+
+Introduction:
+  project_name: "What is the name of your project?"
+  project_purpose: "What is the purpose of your project?"
+  code_status:
+    question: "This code is..."
+    options:
+      - choice: "Actively maintained"
+      - choice: "Maintained"
+      - choice: "Occasionally updated"
+      - choice: "Not in active development"
+  contribution_status:
+  question: "We are _______ contributions at this time."
+  options:
+    - choice: "Actively encouraging"
+      follow_up_questions:
+        - sub_question: "From?"
+          options:
+            - "Coders with experience"
+            - "The community in general"
+            - "Anyone interested in contributing"
+        - sub_question: "Are you looking for people with a particular skillset? (y/n)"
+          if_yes: "We are particularly looking for contributors with experience in: (specify)"
+    - choice: "Currently accepting"
+    - choice: "Not accepting"
+  maintainers_info:
+    question: "Who are the project's maintainers?"
+  contact_method:
+    question: "How can they be contacted?"
+    options:
+      - choice: "Email"
+        follow_up_question: "What is their email address?"
+      - choice: "Through a pull request on Github"
+      - choice: "Discord"
+        follow_up_question: "What is their Discord username?"
+      - choice: "Twitter"
+        follow_up_question: "What is their Twitter handle?"
+      - choice: "Facebook"
+        follow_up_question: "What is their Facebook profile?"
+      - open_input: Other (please specify)
+
+ProjectOverview:
+  main_features:
+    question: "The main features of our project include..."
+    options:
+      - choice: "User-Friendly Interface"
+        follow_up_question: "Can you provide examples or screenshots of the interface?"
+      - choice: "Advanced Technical Capabilities"
+        follow_up_question: "What are some of these technical capabilities?"
+      - choice: "Unique or Innovative Aspects"
+        follow_up_question: "What makes these aspects unique or innovative?"
+  intended_audience:
+    question: "The intended audience for this project is..."
+    options:
+      - choice: "Beginners"
+        follow_up_question: "Are there resources or documentation tailored for beginners?"
+      - choice: "Advanced Users"
+        follow_up_question: "What features or aspects cater specifically to advanced users?"
+      - choice: "Specific Industry Professionals"
+        follow_up_question: "Which industry or professionals are you targeting?"
+  uniqueness_of_project:
+    question: "Our project is unique or important because..."
+    options:
+      - choice: "It Solves a Specific Problem"
+        follow_up_question: "What is the specific problem it solves?"
+      - choice: "It Innovates in the Field"
+        follow_up_question: "In what ways does it bring innovation?"
+      - choice: "It Has a Large User Community"
+        follow_up_question: "How does the large user community contribute to the project?"
+
+ContributionProcess:
+  steps_to_contribute:
+    question: "The steps to make a contribution include..."
+    options:
+      - choice: "Forking and Pull Requests"
+        follow_up_question: "Do you have specific guidelines for pull requests?"
+      - choice: "Direct Commits (for trusted contributors)"
+        follow_up_question: "How does one become a trusted contributor?"
+      - choice: "Submitting Patches via Email"
+        follow_up_question: "To which email address should patches be sent?"
+  contribution_requirements:
+    question: "Our specific requirements for contributions are..."
+    options:
+      - choice: "Adherence to Coding Standards"
+        follow_up_question: "Which coding standards should be followed?"
+      - choice: "Including Tests"
+        follow_up_question: "Are there specific testing frameworks or guidelines to follow?"
+      - choice: "No Specific Requirements"
+
+PullRequests:
+  submission_process:
+    question: "The process for submitting a pull request involves..."
+    options:
+      - choice: "Standard GitHub PR Process"
+        follow_up_question: "Are there any specific steps or requirements in this process?"
+      - choice: "Emailing Patches"
+        follow_up_question: "To which email address should patches be sent?"
+      - choice: "Direct Commit Access (for trusted contributors)"
+        follow_up_question: "How does one gain trusted contributor status?"
+  pr_guidelines:
+    question: "Our specific guidelines for pull requests include..."
+    options:
+      - choice: "Detailed Description and Tests"
+        follow_up_question: "What level of detail and what types of tests are expected?"
+      - choice: "Adhering to a Template"
+        follow_up_question: "Is there a specific template to follow?"
+      - choice: "No Specific Guidelines"
+
+CodingConventions:
+  coding_style:
+    question: "Our coding style and conventions align with..."
+    options:
+      - choice: "Popular Style Guides (e.g., PEP 8 for Python)"
+        follow_up_question: "Which specific style guide do you follow?"
+      - choice: "Project-Specific Guidelines"
+        follow_up_question: "Where can these guidelines be found?"
+      - choice: "No Strict Conventions"
+  linting_tools:
+    question: "We use the following linting or formatting tools..."
+    options:
+      - choice: "Common Tools (e.g., ESLint, Prettier)"
+        follow_up_question: "Which specific tools are recommended?"
+      - choice: "Custom Tools"
+        follow_up_question: "Where can these custom tools be accessed?"
+      - choice: "No Specific Tools"
+
+Documentation:
+  documenting_changes:
+    question: "Our guidelines for documenting code changes involve..."
+    options:
+      - choice: "Detailed Comments"
+        follow_up_question: "Do you have a preferred comment style or format?"
+      - choice: "Updating README and Docs"
+        follow_up_question: "Are there templates or standards for README and documentation updates?"
+      - choice: "Minimal Documentation"
+        follow_up_question: "What is the minimal level of documentation required?"
+  documentation_format:
+    question: "The format or standard for our documentation is..."
+    options:
+      - choice: "Markdown"
+        follow_up_question: "Are there specific Markdown styles or formats you follow?"
+      - choice: "Structured Text"
+        follow_up_question: "Can you provide examples or templates?"
+      - choice: "No Strict Format"
+
+IssueTracking:
+  report_issues:
+    question: "Contributors should report issues by..."
+    options:
+      - choice: "Using GitHub Issues"
+        follow_up_question: "Is there a specific format or template for GitHub Issues?"
+      - choice: "Emailing the Maintainers"
+        follow_up_question: "What is the email address for reporting issues?"
+      - choice: "Posting on Community Forums"
+        follow_up_question: "Which forum should be used, and are there posting guidelines?"
+  issue_format:
+    question: "The format for reporting issues is..."
+    options:
+      - choice: "Structured Template"
+        follow_up_question: "Where can contributors find this template?"
+      - choice: "Freeform Description"
+      - choice: "No Specific Format"
+
+CommunityGuidelines:
+  behavior_guidelines:
+    question: "Our community behavior guidelines emphasize..."
+    options:
+      - choice: "Respect and Inclusivity"
+        follow_up_question: "Can you provide examples or scenarios illustrating this?"
+      - choice: "Professional Conduct"
+        follow_up_question: "Are there specific codes of conduct to follow?"
+      - choice: "Openness to New Ideas"
+        follow_up_question: "How can members propose or discuss new ideas?"
+  involvement_options:
+    question: "Contributors can get involved in the community by..."
+    options:
+      - choice: "Joining Discussions"
+        follow_up_question: "Where do these discussions take place?"
+      - choice: "Participating in Events"
+        follow_up_question: "How can contributors learn about upcoming events?"
+      - choice: "Contributing to Documentation"
+        follow_up_question: "What are the guidelines for contributing to documentation?"
+
+Testing:
+  test_guidelines:
+    question: "Our guidelines for writing tests state that..."
+    options:
+      - choice: "Tests Are Mandatory for All Contributions"
+        follow_up_question: "Are there specific frameworks or styles of testing required?"
+      - choice: "Tests Are Recommended but Not Mandatory"
+        follow_up_question: "Could you provide examples of preferred testing practices?"
+      - choice: "No Specific Testing Guidelines"
+  test_verification:
+    question: "To run and verify tests, contributors should..."
+    options:
+      - choice: "Use Our Automated Test Suite"
+        follow_up_question: "How can contributors access and use the automated test suite?"
+      - choice: "Manually Test Their Code"
+        follow_up_question: "Are there guidelines or criteria for manual testing?"
+      - choice: "No Specific Testing Procedure"
+
+Licence:
+  project_licence:
+    question: "The project is distributed under..."
+    options:
+      - choice: "MIT, GPL, Apache, etc."
+        follow_up_question: "Which specific license is used?"
+      - choice: "A Custom License"
+        follow_up_question: "Where can contributors review the custom license?"
+      - choice: "No License"
+  licence_restrictions:
+    question: "Regarding restrictions or obligations, contributors should be aware that..."
+    options:
+      - choice: "Contributions Must Adhere to License Terms"
+        follow_up_question: "Can you specify these terms?"
+      - choice: "There Are No Restrictions"
+      - choice: "Other Specific Obligations"
+        follow_up_question: "What are these specific obligations?"
+
+

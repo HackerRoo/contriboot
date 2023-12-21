@@ -1,0 +1,59 @@
+#TODO
+#Update as per github style guide
+Project Introduction:
+---------------------
+Project Name: [Your Project Name]
+Project Purpose: [Purpose of Your Project]
+Code Status: [Choice: Actively maintained / Maintained / Occasionally updated / Not in active development]
+Contribution Status: [Choice: Actively encouraging / Currently accepting / Not accepting]
+Seeking contributions from: [Choice: Coders with experience / The community in general / Anyone interested in contributing]
+With skills in: [open_input]
+Maintainers: [List of Project Maintainers]
+Contact Method: [Choice: Email / Through a pull request / Discord / Twitter / Facebook]
+
+Project Overview:
+-----------------
+Main Features: [List of Main Features]
+Intended Audience: [Choice: Beginners / Advanced Users / Specific Industry Professionals]
+Uniqueness of Project: [Choice: It Solves a Specific Problem / It Innovates in the Field / It Has a Large User Community]
+
+Contribution Process:
+----------------------
+Steps to Contribute: [List of Contribution Steps]
+Contribution Requirements: [List of Contribution Requirements]
+
+Coding Conventions:
+-------------------
+Coding Style: [Choice: Popular Style Guides / Project-Specific Guidelines / No Strict Conventions]
+Linting Tools: [List of Linting or Formatting Tools]
+
+Community Guidelines:
+----------------------
+Behavior Guidelines: [List of Behavior Guidelines]
+Involvement Options: [List of Involvement Options]
+
+Documentation:
+--------------
+Documenting Changes: [Choice: Detailed Comments / Updating README and Docs / Minimal Documentation]
+Documentation Format: [Choice: Markdown / Structured Text / No Strict Format]
+
+Issue Tracking:
+---------------
+Report Issues: [Choice: Using GitHub Issues / Emailing the Maintainers / Posting on Community Forums]
+Issue Format: [Choice: Structured Template / Freeform Description / No Specific Format]
+
+License:
+--------
+Project License: [Choice: MIT, GPL, Apache, etc. / A Custom License / No License]
+License Restrictions: [List of License Restrictions]
+
+Pull Requests:
+---------------
+Submission Process: [Choice: Standard GitHub PR Process / Emailing Patches / Direct Commit Access (for trusted contributors)]
+PR Guidelines: [List of PR Guidelines]
+
+Testing:
+--------
+Test Guidelines: [Choice: Tests Are Mandatory for All Contributions / Tests Are Recommended but Not Mandatory / No Specific Testing Guidelines]
+Test Verification: [Choice: Use Our Automated Test Suite / Manually Test Their Code / No Specific Testing Procedure]
+
