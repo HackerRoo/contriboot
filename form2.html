@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contributing.md Generator</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    /* Add your CSS styles */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contributing.md Generator</h1>
+  
+  <!-- Select Headings Section -->
+  <h2>Select Headings</h2>
+  <label for="headings">Select the headings that you want to include:</label><br>
+  <input type="checkbox" id="introduction" name="headings" value="Introduction" onchange="toggleSection('introductionSection', this)">Introduction<br>
+  <input type="checkbox" id="projectOverview" name="headings" value="Project Overview" onchange="toggleSection('projectOverview', this)">Project Overview<br>
+  <input type="checkbox" id="pullRequestGuidelines" name="headings" value="Pull Request Guidelines" onchange="toggleSection('pullRequestGuidelines', this)">Pull Request Guidelines<br>
+ <input type="checkbox" id="codingConventions" name="headings" value="Coding Conventions" onchange="toggleSection('codingConventions', this)">Coding Conventions<br>
+ <input type="checkbox" id="Documentation" name="headings" value="Documentation" onchange="toggleSection('Documentation', this)">Documentation<br>
+ <input type="checkbox" id="issueTracking" name="headings" value="Issue Tracking" onchange="toggleSection('issueTracking', this)">Issue Tracking<br>
+ <input type="checkbox" id="communityGuidelines" name="headings" value="Community Guidelines" onchange="toggleSection('communityGuidelines', this)">Community Guidelines<br>
+ <input type="checkbox" id="Testing" name="headings" value="Testing"
+onchange="toggleSection('Testing', this)">Testing<br>
+ <input type="checkbox" id="Licence" name="headings" value="Licence" 
+onchange="toggleSection('Licence', this)">Licence<br>
+ <input type="checkbox" id="Contact" name="headings" value="Contact" 
+onchange="toggleSection('Contact', this)">Contact<br>
+
+  <!-- Sections -->
+  <div id="introductionSection" class="hidden">
+    <h2>Introduction</h2>
+  <!-- Introduction Section -->
+   <h2>Introduction</h2>
+    <label for="projectName">What is the name of your project?</label><br>
+    <input type="text" id="projectName" name="projectName"><br><br>
+
+    <label for="projectPurpose">What is the purpose of your project?</label><br>
+    <input type="text" id="projectPurpose" name="projectPurpose"><br><br>
+
+    <label for="projectStage">What stage is your project in?</label><br>
+    <select id="projectStage" name="projectStage">
+      <option value="Pre-Alpha">Pre-Alpha</option>
+      <option value="Alpha">Alpha</option>
+      <option value="Beta">Beta</option>
+      <option value="Release candidate">Release candidate</option>
+      <option value="Stable release / maintenance">Stable release / maintenance</option>
+    </select><br><br>
+
+    <label for="codeStatus">This code is...</label><br>
+    <select id="codeStatus" name="codeStatus">
+      <option value="Actively maintained">Actively maintained</option>
+      <option value="Maintained">Maintained</option>
+      <option value="Occasionally updated">Occasionally updated</option>
+      <option value="Not in active development">Not in active development</option>
+    </select><br><br>
+
+    <label for="contributionsStatus">We are _______ contributions at this time.</label><br>
+    <select id="contributionsStatus" name="contributionsStatus">
+      <option value="Actively encouraging">Actively encouraging</option>
+      <option value="Currently accepting">Currently accepting</option>
+      <option value="Not accepting">Not accepting</option>
+    </select><br><br>
+   
+      <label for="experienced">We are seeking contributions from</label><br>
+    <select id="experienced" name="contributionType">
+      <option value="Anyone">Anyone</option>
+      <option value="People with specific skillsets">People with specific skillsets</option>
+    </select><br><br>
+
+<label for="skillsets">What skillsets are you looking for?</label><br>
+<input type="text" id="skillsets" name="skillsets"><br><br>
+ 
+
+ </div>
+  <div id="gettingStartedSection" class="hidden">
+    <h2>Getting Started</h2>
+    <!-- Getting Started content goes here -->
+  </div>
+  <div id="codeOfConductSection" class="hidden">
+    <h2>Code of Conduct</h2>
+    <!-- Code of Conduct content goes here -->
+  </div>
+  <!-- Add more sections as needed -->
+
+  <script>
+    function toggleSection(sectionId, checkbox) {
+      var section = document.getElementById(sectionId);
+      if (checkbox.checked) {
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
+      }
+    }
+  function selectAll() {
+    const checkboxes = document.querySelectorAll('input[name="headings"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = true;
+    });
+  }
+
+  function clearSelection() {
+    const checkboxes = document.querySelectorAll('input[name="headings"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  }
+  </script>
+</body>
+</html>
+
