@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contributing.md Generator</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    /* Add your CSS styles */
+  </style>
+</head>
+<body>
+  <h1>Contributing.md Generator</h1>
+  
+    <!-- Select Headings Section -->
+    <h2>Select Headings</h2>
+    <label for="headings">Select the headings that you want to include:</label><br>
+    <input type="checkbox" id="introduction" name="headings" value="Introduction">
+    <label for="introduction"> Introduction</label><br>
+    <input type="checkbox" id="projectOverview" name="headings" value="Project Overview">
+    <label for="projectOverview"> Project Overview</label><br>
+    <input type="checkbox" id="contributionProcess" name="headings" value="Contribution Process">
+    <label for="contributionProcess"> Contribution Process</label><br>
+    <input type="checkbox" id="pullRequestGuidelines" name="headings" value="Pull Request Guidelines">
+    <label for="pullRequestGuidelines"> Pull Request Guidelines</label><br>
+    <input type="checkbox" id="codingConventions" name="headings" value="Coding Conventions">
+    <label for="codingConventions"> Coding Conventions</label><br>
+    <input type="checkbox" id="documentation" name="headings" value="Documentation">
+    <label for="documentation"> Documentation</label><br>
+    <input type="checkbox" id="issueTracking" name="headings" value="Issue Tracking">
+    <label for="issueTracking"> Issue Tracking</label><br>
+    <input type="checkbox" id="communityGuidelines" name="headings" value="Community Guidelines">
+    <label for="communityGuidelines"> Community Guidelines</label><br>
+    <input type="checkbox" id="testing" name="headings" value="Testing">
+    <label for="testing"> Testing</label><br>
+    <input type="checkbox" id="license" name="headings" value="License">
+    <label for="license"> License</label><br><br>
+    <button type="button" onclick="selectAll()">Select All</button>
+<button type="button" onclick="clearSelection()">Clear Selection</button>
+<script>
+  function selectAll() {
+    const checkboxes = document.querySelectorAll('input[name="headings"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = true;
+    });
+  }
+
+  function clearSelection() {
+    const checkboxes = document.querySelectorAll('input[name="headings"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  }
+</script>
+
+  <form id="contributingForm">
+    <!-- Introduction Section -->
+   <h2>Introduction</h2>
+    <label for="projectName">What is the name of your project?</label><br>
+    <input type="text" id="projectName" name="projectName"><br><br>
+
+    <label for="projectPurpose">What is the purpose of your project?</label><br>
+    <input type="text" id="projectPurpose" name="projectPurpose"><br><br>
+
+    <label for="projectStage">What stage is your project in?</label><br>
+    <select id="projectStage" name="projectStage">
+      <option value="Pre-Alpha">Pre-Alpha</option>
+      <option value="Alpha">Alpha</option>
+      <option value="Beta">Beta</option>
+      <option value="Release candidate">Release candidate</option>
+      <option value="Stable release / maintenance">Stable release / maintenance</option>
+    </select><br><br>
+
+    <label for="codeStatus">This code is...</label><br>
+    <select id="codeStatus" name="codeStatus">
+      <option value="Actively maintained">Actively maintained</option>
+      <option value="Maintained">Maintained</option>
+      <option value="Occasionally updated">Occasionally updated</option>
+      <option value="Not in active development">Not in active development</option>
+    </select><br><br>
+
+    <label for="contributionsStatus">We are _______ contributions at this time.</label><br>
+    <select id="contributionsStatus" name="contributionsStatus">
+      <option value="Actively encouraging">Actively encouraging</option>
+      <option value="Currently accepting">Currently accepting</option>
+      <option value="Not accepting">Not accepting</option>
+    </select><br><br>
+   
+
+<label for="experienced">Who would you like to contribute to your project?</label><br>
+<input type="radio" id="experienced" name="contributionType" value="People with experience">
+<label for="experienced"> People with experience</label><br>
+<input type="radio" id="interested" name="contributionType" value="Anyone interested in contributing">
+<label for="interested"> Anyone interested in contributing</label><br><br>
+
+
+<label for="skillsets">What skillsets are you looking for?</label><br>
+<input type="text" id="skillsets" name="skillsets"><br><br>
+
+    <!-- Project Overview Section -->
+    <h2>Project Overview</h2>
+    <!-- Add input fields for Project Overview section -->
+
+    <!-- Contribution Process Section -->
+    <h2>Contribution Process</h2>
+    <!-- Add input fields for Contribution Process section -->
+
+    <!-- Pull Request Guidelines Section -->
+    <h2>Pull Request Guidelines</h2>
+    <!-- Add input fields for Pull Request Guidelines section -->
+
+    <!-- Coding Conventions Section -->
+    <h2>Coding Conventions</h2>
+    <!-- Add input fields for Coding Conventions section -->
+
+    <!-- Documentation Section -->
+    <h2>Documentation</h2>
+    <!-- Add input fields for Documentation section -->
+
+    <!-- Issue Tracking Section -->
+    <h2>Issue Tracking</h2>
+    <!-- Add input fields for Issue Tracking section -->
+
+    <!-- Community Guidelines Section -->
+    <h2>Community Guidelines</h2>
+    <!-- Add input fields for Community Guidelines section -->
+
+    <!-- Testing Section -->
+    <h2>Testing</h2>
+    <!-- Add input fields for Testing section -->
+
+    <!-- License Section -->
+    <h2>License</h2>
+    <!-- Add input fields for License section -->
+
+<!-- ... (your existing HTML code) ... -->
+
+<!-- Generate contributing.md button -->
+<button type="submit" onclick="generateMarkdown()">Generate contributing.md</button>
+
+<script>
+  function generateMarkdown() {
+    const formData = new FormData(document.getElementById("contributingForm"));
+    let markdownContent = "# Contributing Guidelines\n\n";
+
+    formData.forEach((value, key) => {
+      if (key === 'headings') {
+        markdownContent += `## Selected Headings\n`;
+        const headings = Array.from(formData.getAll('headings'));
+        headings.forEach((heading) => {
+          markdownContent += `- ${heading}\n`;
+        });
+        markdownContent += '\n';
+      } else {
+        markdownContent += `## ${key}\n`;
+        markdownContent += `${value}\n\n`;
+      }
+    });
+
+    // Create a text file with markdown content
+    const blob = new Blob([markdownContent], { type: 'text/markdown' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'CONTRIBUTING.md';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }
+</script>
+
+  
+</form>
+
+  <script>
+    // JavaScript logic for handling form submission and interactions
+    document.getElementById("contributingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Collect form data and send it to the server for processing
+      const formData = new FormData(this);
+      // Send formData to the server using fetch or XMLHttpRequest
+      // Process the data on the server to generate contributing.md
+      // Return the generated contributing.md to the user
+    });
+  </script>
+</body>
+</html>
+

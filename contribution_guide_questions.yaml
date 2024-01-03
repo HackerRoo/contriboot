@@ -1,22 +1,34 @@
 desired_headings:
   type: multiple_choice
-  question: "Select the headings you want in your contributing.md file (multiple choices allowed). You can navigate the options and press space to select [x]."
+  question: "Select the headings you want in your contributing.md file"
   options:
-    - choice: "[  ] Introduction"
-    - choice: "[  ] Project Overview"
-    - choice: "[  ] Contribution Process"
-    - choice: "[  ] Pull Request Guidelines"
-    - choice: "[  ] Coding Conventions"
-    - choice: "[  ] Documentation"
-    - choice: "[  ] Issue Tracking"
-    - choice: "[  ] Community Guidelines"
-    - choice: "[  ] Testing"
-    - choice: "[  ] License"
+    - choice: "Introduction"
+    - choice: "Project Overview"
+    - choice: "Contribution Process"
+    - choice: "Pull Request Guidelines"
+    - choice: "Coding Conventions"
+    - choice: "Documentation"
+    - choice: "Issue Tracking"
+    - choice: "Community Guidelines"
+    - choice: "Testing"
+    - choice: "License"
 
 Introduction:
-  project_name: "What is the name of your project?"
-  project_purpose: "What is the purpose of your project?"
-  code_status:
+  questions:
+  - type: open_input
+  question project_name: "What is the name of your project?"
+  question project_purpose: "What is the purpose of your project?"
+  - type: single_choice  
+    project_status:
+    question: "What stage is your project in?"
+    options: 
+      - choice: "Pre-Alpha"
+      - choice: "Alpha"
+      - choice: "Beta"
+      - choice: "Release candidate"
+      - choice: "Stable release / maintenance"
+ - type: single_choice  
+    code_status:
     question: "This code is..."
     options:
       - choice: "Actively maintained"
@@ -25,6 +37,7 @@ Introduction:
       - choice: "Not in active development"
   contribution_status:
   question: "We are _______ contributions at this time."
+  - type: single_choice
   options:
     - choice: "Actively encouraging"
       follow_up_questions:
@@ -38,18 +51,24 @@ Introduction:
     - choice: "Currently accepting"
     - choice: "Not accepting"
   maintainers_info:
+  - type: open_input
     question: "Who are the project's maintainers?"
   contact_method:
+  - type: multiple_choice
     question: "How can they be contacted?"
     options:
       - choice: "Email"
+        - type: open_input        
         follow_up_question: "What is their email address?"
       - choice: "Through a pull request on Github"
       - choice: "Discord"
+        - type: open_input        
         follow_up_question: "What is their Discord username?"
       - choice: "Twitter"
+        - type: open_input        
         follow_up_question: "What is their Twitter handle?"
       - choice: "Facebook"
+        - type: open_input        
         follow_up_question: "What is their Facebook profile?"
       - open_input: Other (please specify)
 
